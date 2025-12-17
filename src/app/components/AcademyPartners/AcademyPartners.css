@@ -1,0 +1,24 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Adjust to move left */
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  gap: 100px; /* Space between logos */
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden; /* Hide overflowing logos */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.marquee-inner {
+  display: flex; /* Create a flex container for the logos */
+}

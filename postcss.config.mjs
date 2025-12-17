@@ -2,6 +2,7 @@
 const config = {
   plugins: {
     tailwindcss: {},
+    autoprefixer: {}, // Eta add kore dilam, CSS sob browser e thikmoto kaj korbe
   },
 };
 
