@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image"; // IMPORTED IMAGE
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation"; 
 
@@ -27,22 +28,26 @@ const Navbar = () => {
 
   return (
     <nav
-      // FIX: Added !border-none !shadow-none !outline-none to force remove any borders globally
       className={`sticky top-0 z-50 w-full transition-all duration-300 !border-none !outline-none !shadow-none ${
         scrolled
-          ? "bg-[#D1EDFF]/90 backdrop-blur-md py-3" // Scrolled state
-          : "bg-[#D1EDFF] py-4" // Initial state (Same color, no border)
+          ? "bg-[#D1EDFF]/90 backdrop-blur-md py-3" 
+          : "bg-[#D1EDFF] py-4" 
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
         
         {/* Logo Area */}
         <Link href="/" className="flex items-center gap-2 group">
-          <img
-            src="https://i.postimg.cc/KcNDDNCP/Group-1000004290.png"
-            alt="Brand Logo"
-            className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
-          />
+          {/* FIXED: Replaced <img> with Next.js <Image /> */}
+          <div className="relative h-10 w-32"> {/* Added a wrapper for sizing */}
+            <Image
+              src="https://i.postimg.cc/KcNDDNCP/Group-1000004290.png"
+              alt="Brand Logo"
+              fill
+              className="object-contain transition-transform group-hover:scale-105"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

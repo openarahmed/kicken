@@ -17,38 +17,53 @@ const AmazingMomentsSection: React.FC = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://i.postimg.cc/52sZCPzN/Gallery_2_1.jpg", // Old 1
-      alt: "Amazing Moment Highlight 1",
-      className: "md:col-span-2", // Row 1: 1/3 width
+      src: "https://i.postimg.cc/52sZCPzN/Gallery_2_1.jpg",
+      // Content Update: Specific Alt Text
+      alt: "Kicken Academy Players Celebrating a Victory",
+      className: "md:col-span-2",
       delay: "0",
+      // Content Update: Hover Caption
+      caption: "Championship Victory Celebration",
     },
     {
       id: 2,
-      src: "https://i.postimg.cc/wvmPngGZ/Gallery_1_1.jpg", // Old 2
-      alt: "Amazing Moment Highlight 2",
-      className: "md:col-span-2", // Row 1: 1/3 width
+      src: "https://i.postimg.cc/wvmPngGZ/Gallery_1_1.jpg",
+      // Content Update: Specific Alt Text
+      alt: "Intense Training Session Drill",
+      className: "md:col-span-2",
       delay: "100",
+      // Content Update: Hover Caption
+      caption: "High-Intensity Training Drill",
     },
     {
       id: 3,
-      src: "https://i.postimg.cc/13MZKmkf/Our_Common_Goals.jpg", // NEW 1
-      alt: "Amazing Moment Highlight 3",
-      className: "md:col-span-2", // Row 1: 1/3 width
+      src: "https://i.postimg.cc/13MZKmkf/Our_Common_Goals.jpg",
+      // Content Update: Specific Alt Text
+      alt: "Coach Mentoring Young Players on the Pitch",
+      className: "md:col-span-2",
       delay: "200",
+      // Content Update: Hover Caption
+      caption: "Mentorship & Tactical Guidance",
     },
     {
       id: 4,
-      src: "https://i.postimg.cc/fLm2B5V9/Gallery_3.jpg", // NEW 2
-      alt: "Amazing Moment Highlight 4",
-      className: "md:col-span-3", // Row 2: 1/2 width (Wide)
+      src: "https://i.postimg.cc/fLm2B5V9/Gallery_3.jpg",
+      // Content Update: Specific Alt Text
+      alt: "Team Huddle Before a Big Match",
+      className: "md:col-span-3",
       delay: "300",
+      // Content Update: Hover Caption
+      caption: "Pre-Match Team Huddle",
     },
     {
       id: 5,
-      src: "https://i.postimg.cc/y8pbdDqP/Gallery_4.jpg", // NEW 3
-      alt: "Amazing Moment Highlight 5",
-      className: "md:col-span-3", // Row 2: 1/2 width (Wide)
+      src: "https://i.postimg.cc/y8pbdDqP/Gallery_4.jpg",
+      // Content Update: Specific Alt Text
+      alt: "Youth Player Scoring a Goal",
+      className: "md:col-span-3",
       delay: "400",
+      // Content Update: Hover Caption
+      caption: "The Winning Goal Moment",
     },
   ];
 
@@ -58,12 +73,14 @@ const AmazingMomentsSection: React.FC = () => {
         
         {/* --- Section Header --- */}
         <div className="max-w-3xl mx-auto mb-[48px] md:mb-[64px]" data-aos="fade-up">
+          {/* Content Update: Headline */}
           <h2 className="font-extrabold text-[32px] md:text-[48px] lg:text-[64px] leading-[1.1] mb-6 text-gray-900">
-            Amazing <span className="text-blue-600">Moments</span>
+            Our Defining <span className="text-blue-600">Moments</span>
           </h2>
+          {/* Content Update: Description */}
           <p className="text-gray-500 text-[15px] md:text-[16px] lg:text-[18px] leading-relaxed">
-            Relive the passion, the victories, and the unforgettable memories created on the field. 
-            Every snapshot tells a story of dedication and teamwork.
+            From the training ground to the final whistle, these are the snapshots of passion, 
+            resilience, and triumph that define the Kicken Academy spirit.
           </p>
         </div>
 
@@ -85,9 +102,10 @@ const AmazingMomentsSection: React.FC = () => {
               />
               
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
+                {/* Content Update: Displaying Specific Caption on Hover */}
                 <span className="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  View Moment
+                  {image.caption}
                 </span>
               </div>
             </div>

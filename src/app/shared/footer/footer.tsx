@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image"; // IMPORTED
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPaperPlane } from "react-icons/fa";
 
 const Footer = () => {
@@ -13,10 +14,14 @@ const Footer = () => {
           {/* 1. Brand & About */}
           <div>
             <Link href="/" className="inline-block mb-6">
-              <img
-                className="w-32"
+              {/* FIXED: Replaced <img> with Next.js <Image /> */}
+              <Image
                 src="https://i.postimg.cc/KcNDDNCP/Group-1000004290.png"
                 alt="Kicken Logo"
+                width={128} // Corresponds to w-32 (32 * 4px)
+                height={40}  // Adjusted height for aspect ratio
+                className="object-contain"
+                priority={false}
               />
             </Link>
             <p className="text-gray-500 text-[15px] leading-relaxed mb-6">
@@ -71,7 +76,7 @@ const Footer = () => {
             <p className="text-gray-500 text-[15px] mb-4">
               Subscribe to get the latest updates and training tips.
             </p>
-            <form className="relative">
+            <form className="relative" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -92,7 +97,7 @@ const Footer = () => {
       {/* --- Bottom Bar --- */}
       <div className="border-t border-blue-100 bg-[#e6f4ff]">
         <div className="container mx-auto px-[20px] md:px-[32px] lg:px-[64px] py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>© 2024 Kicken by Shakil. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Kicken by Shakil. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-blue-600">Privacy Policy</Link>
             <Link href="#" className="hover:text-blue-600">Terms of Service</Link>

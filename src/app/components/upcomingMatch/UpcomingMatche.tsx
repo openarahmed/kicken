@@ -15,33 +15,33 @@ interface Match {
   aosDelay: string;
 }
 
-// Data Array
+// Data Array - Content Update: Professional Club Names
 const matches: Match[] = [
   {
     id: 1,
-    team1: "Sumper",
+    team1: "Kicken Elite",
     team1Logo: "https://i.postimg.cc/6TsPBSD3/Wolf_Head_Mascot-2.png",
-    team2: "Tigerhown",
+    team2: "Northside FC",
     team2Logo: "https://i.postimg.cc/9XvX4f2c/Frame-55.png",
-    date: "September 20, 2025, 1:00 PM",
+    date: "December 20, 2025, 3:00 PM",
     aosDelay: "0",
   },
   {
     id: 2,
-    team1: "Hustlin Owls",
+    team1: "Blue Phoenix",
     team1Logo: "https://i.postimg.cc/xTMfLSjM/Group-53.png",
-    team2: "Zumper",
+    team2: "Kicken Juniors",
     team2Logo: "https://i.postimg.cc/9XvX4f2c/Frame-55.png",
-    date: "September 23, 2025, 1:00 PM",
+    date: "December 23, 2025, 11:00 AM",
     aosDelay: "100",
   },
   {
     id: 3,
-    team1: "Zumper",
+    team1: "Kicken Stars",
     team1Logo: "https://i.postimg.cc/wjz6Vb7q/1-7898108.png",
-    team2: "Cobraxx",
+    team2: "Shadow Strikers",
     team2Logo: "https://i.postimg.cc/xTMfLSjM/Group-53.png",
-    date: "September 25, 2025, 1:00 PM",
+    date: "December 25, 2025, 4:30 PM",
     aosDelay: "200",
   },
 ];
@@ -56,24 +56,18 @@ const UpcomingMatches: React.FC = () => {
   }, []);
 
   return (
-    <section 
-      // Rule #5: Section Vertical Spacing (Mobile: 56px, Tablet: 80px, Desktop: 128px)
-      className="bg-gray-50 text-black overflow-hidden py-[56px] md:py-[80px] lg:py-[128px]"
-    >
-      {/* Rule #6: Horizontal Container Padding (Mobile: 20px, Tablet: 32px, Desktop: 64px) */}
+    <section className="bg-gray-50 text-black overflow-hidden py-[56px] md:py-[80px] lg:py-[128px]">
       <div className="container mx-auto px-[20px] md:px-[32px] lg:px-[64px]">
         
         {/* --- Section Title --- */}
-        {/* Rule #4: Internal Spacing (Title -> Content) */}
         <div className="text-center mb-[32px] md:mb-[48px] lg:mb-[64px]" data-aos="fade-up">
-          {/* Rule #3: Typography Scale (Mobile: 36px, Tablet: 48px, Desktop: 72px) */}
           <h2 className="font-extrabold uppercase tracking-tight leading-[1.1] mb-4 text-[36px] md:text-[48px] lg:text-[72px]">
-            Upcoming Big <span className="text-blue-600">Matches</span>
+            Championship <span className="text-blue-600">Showdowns</span>
           </h2>
           <div className="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* --- Featured Big Match (Black Box) --- */}
+        {/* --- Featured Big Match (The Big Derby) --- */}
         <div
           data-aos="zoom-in"
           className="relative bg-[#111] text-white rounded-2xl shadow-2xl overflow-hidden border border-gray-800
@@ -83,21 +77,25 @@ const UpcomingMatches: React.FC = () => {
           {/* Background Glow Effect */}
           <div className="absolute top-0 left-0 w-full h-full bg-blue-900/10 z-0 pointer-events-none"></div>
 
-          <div className="relative z-10 flex flex-col md:flex-row justify-between items-center text-center gap-8 md:gap-0">
+          {/* Badge for the main match */}
+          <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-red-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+             Main Event: Academy Final
+          </div>
+
+          <div className="relative z-10 flex flex-col md:flex-row justify-between items-center text-center gap-8 md:gap-0 mt-4">
             
             {/* Team 1 */}
             <div className="flex flex-col items-center gap-4 flex-1">
               <div className="w-[80px] h-[80px] md:w-[120px] md:h-[120px] relative hover:scale-110 transition-transform duration-300">
                 <Image
                   src="https://i.postimg.cc/3RRV12g9/wolves-socer-esport-logo-transparant-1.png"
-                  alt="Wolves Logo"
+                  alt="Kicken Elite Logo"
                   fill
                   className="object-contain"
                 />
               </div>
-              {/* Subtitle Scale: Desktop 24px */}
               <span className="font-bold tracking-widest uppercase text-[18px] md:text-[20px] lg:text-[24px]">
-                WOLVES
+                KICKEN ELITE
               </span>
             </div>
 
@@ -107,9 +105,9 @@ const UpcomingMatches: React.FC = () => {
                 VS
               </h1>
               <p className="text-gray-400 mt-2 font-medium text-[15px] md:text-[16px] lg:text-[18px]">
-                September 15, 2025
+                December 15, 2025
               </p>
-              <p className="text-gray-500 text-sm">1:00 PM</p>
+              <p className="text-blue-500 font-bold uppercase text-xs tracking-tighter">Grand Stadium, NYC</p>
             </div>
 
             {/* Team 2 */}
@@ -117,30 +115,29 @@ const UpcomingMatches: React.FC = () => {
               <div className="w-[80px] h-[80px] md:w-[120px] md:h-[120px] relative hover:scale-110 transition-transform duration-300">
                 <Image
                   src="https://i.postimg.cc/Y9sVsjR1/Group-52.png"
-                  alt="Kyuryu Logo"
+                  alt="Global Titans Logo"
                   fill
                   className="object-contain"
                 />
               </div>
               <span className="font-bold tracking-widest uppercase text-[18px] md:text-[20px] lg:text-[24px]">
-                KYURYU
+                GLOBAL TITANS
               </span>
             </div>
           </div>
         </div>
 
         {/* --- Action Buttons --- */}
-        {/* Spacing Description -> CTA */}
         <div data-aos="fade-up" className="text-center mb-[48px] md:mb-[64px] lg:mb-[96px]">
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
             <button className="px-8 py-3 border-2 border-black rounded-lg text-black font-semibold hover:bg-black hover:text-white transition-all duration-300 uppercase tracking-wide text-[15px] md:text-[16px]">
-              More Info
+              Full Schedule
             </button>
             <button className="px-8 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-blue-600 transition-all duration-300 uppercase tracking-wide shadow-lg hover:shadow-blue-500/30 text-[15px] md:text-[16px]">
-              Location Map
+              Venue Directions
             </button>
             <button className="px-8 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 uppercase tracking-wide shadow-lg hover:shadow-red-500/30 text-[15px] md:text-[16px]">
-              Buy Ticket
+              Secure Your Seats
             </button>
           </div>
         </div>
@@ -154,13 +151,12 @@ const UpcomingMatches: React.FC = () => {
               data-aos-delay={match.aosDelay}
               className="bg-white p-[24px] md:p-[32px] rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
             >
-              {/* Decorative Background Blob */}
               <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors"></div>
 
               <div className="relative z-10">
                 <div className="flex justify-center items-center gap-6 mb-6">
                   {/* Team 1 Small */}
-                  <div className="w-16 h-16 relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <div className="w-14 h-14 relative grayscale group-hover:grayscale-0 transition-all duration-300">
                     <Image
                       src={match.team1Logo}
                       alt={match.team1}
@@ -169,10 +165,10 @@ const UpcomingMatches: React.FC = () => {
                     />
                   </div>
                   
-                  <span className="text-2xl font-black text-blue-600 italic">VS</span>
+                  <span className="text-xl font-black text-blue-600 italic">VS</span>
                   
                   {/* Team 2 Small */}
-                  <div className="w-16 h-16 relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <div className="w-14 h-14 relative grayscale group-hover:grayscale-0 transition-all duration-300">
                     <Image
                       src={match.team2Logo}
                       alt={match.team2}
@@ -186,10 +182,10 @@ const UpcomingMatches: React.FC = () => {
                   <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors text-[18px] md:text-[20px]">
                     {match.team1} <span className="text-gray-400 font-light">vs</span> {match.team2}
                   </h4>
-                  <p className="text-gray-500 text-sm mb-6">{match.date}</p>
+                  <p className="text-gray-500 text-xs mb-6 uppercase font-semibold">{match.date}</p>
                   
                   <button className="w-full py-3 rounded bg-blue-50 text-blue-600 font-bold hover:bg-red-600 hover:text-white transition-all duration-300 text-[15px]">
-                    Get Ticket
+                    Get Your Ticket
                   </button>
                 </div>
               </div>

@@ -16,27 +16,27 @@ const AcademyProgramSection: React.FC = () => {
   const programs = [
     {
       id: 1,
-      title: "Know And Understand Player Identity",
+      title: "Technical Mastery & Ball Control",
       description:
-        "We focus on understanding each player's unique strengths and style to build a strong foundation.",
+        "Developing superior touch, close-range control, and passing accuracy to ensure players remain composed under high-pressure match situations.",
     },
     {
       id: 2,
-      title: "Identify Player Role Models",
+      title: "Tactical Intelligence & Game Vision",
       description:
-        "Analyzing top-tier professionals helps young players visualize their path and refine their techniques.",
+        "Teaching players how to read the game, understand positioning, and make split-second decisions that change the course of a match.",
     },
     {
       id: 3,
-      title: "Develop 360-Degree Player Plan",
+      title: "Elite Physical Conditioning",
       description:
-        "A comprehensive approach covering physical, mental, and tactical aspects of the game.",
+        "A science-backed fitness regime focusing on explosive speed, agility, and core strength specifically tailored for modern, high-intensity football.",
     },
     {
       id: 4,
-      title: "Establish Daily Habits On And Off The Field",
+      title: "Professional Mindset & Leadership",
       description:
-        "Discipline is key. We cultivate professional habits that last a lifetime beyond the pitch.",
+        "Cultivating the mental toughness, off-field discipline, and leadership qualities required to succeed in a professional club environment.",
     },
   ];
 
@@ -47,12 +47,12 @@ const AcademyProgramSection: React.FC = () => {
         {/* --- Section Header --- */}
         <div className="max-w-4xl mb-[48px] md:mb-[64px]" data-aos="fade-up">
           <h3 className="text-blue-600 font-bold uppercase tracking-widest text-[14px] md:text-[16px] mb-2">
-            Academy Program
+            Academy Programs
           </h3>
           <h2 className="font-extrabold text-[32px] md:text-[48px] lg:text-[64px] leading-[1.1] text-gray-900">
-            Find Your Game With The <br className="hidden md:block" />
+            Unlock Your Elite Potential At <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">
-              Halland Football Academy
+              Kicken Football Academy
             </span>
           </h2>
         </div>
@@ -68,10 +68,8 @@ const AcademyProgramSection: React.FC = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center gap-[20px] md:gap-[40px]">
                 
-                {/* 1. Big Number Styling (UPDATED OPACITY) */}
+                {/* 1. Big Number Styling */}
                 <div className="hidden md:block">
-                  {/* Changed text-gray-100 -> text-gray-300 (Visible) */}
-                  {/* Changed hover color to blue-200 for better contrast */}
                   <span className="text-[60px] font-black text-gray-300 leading-none group-hover:text-blue-200 transition-colors duration-300 select-none">
                     0{program.id}
                   </span>

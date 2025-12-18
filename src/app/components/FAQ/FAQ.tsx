@@ -19,50 +19,49 @@ const FAQ = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  // Updated Content to match Football Academy Theme
+  // Content Update: Professional and Build-Safe (escaped entities)
   const faqs = [
     {
-      question: "How do I join the Kicken Football Academy?",
+      question: "What is the enrollment process for Kicken Academy?",
       answer:
-        "Joining is simple! You can register online through our 'Join Now' page or visit our academy for a trial session. We assess players based on their skill level and assign them to the appropriate age group and training module.",
+        "Enrollment begins with an online registration followed by a mandatory trial session. Our scouting team evaluates the player&apos;s current technical level and physical attributes to place them in a development squad that best suits their growth potential.",
     },
     {
-      question: "What age groups do you provide training for?",
+      question: "Which age categories do you cater to?",
       answer:
-        "We offer training programs for various age groups, starting from U-10 (Under 10) up to U-21. We also have specialized senior leagues and professional development programs for advanced players looking to go pro.",
+        "Our pro-pathway programs start from U-8 (Foundation) and extend up to U-21 (Elite Development). We also host specialized training for senior players looking to refine their tactical awareness before professional club trials.",
     },
     {
-      question: "Do you offer professional scouting opportunities?",
+      question: "Does the academy provide pathways to professional clubs?",
       answer:
-        "Yes! We have partnerships with several national and international clubs. Our top-performing players are regularly scouted for trials and professional contracts. We also host annual showcase tournaments attended by club scouts.",
+        "Absolutely. Kicken Academy maintains strategic partnerships with top-tier domestic and international clubs. High-performing athletes are regularly invited to private showcases and may be recommended for direct trials with professional scouts.",
     },
     {
-      question: "What kind of facilities does the academy have?",
+      question: "What makes Kicken&apos;s training facilities world-class?",
       answer:
-        "We pride ourselves on world-class facilities, including FIFA-standard turf grounds, a fully equipped gym, physiotherapy center, and video analysis rooms to help players understand the tactical side of the game.",
+        "We offer a high-performance environment featuring FIFA-accredited turf pitches, an advanced sports science lab, a specialized strength and conditioning center, and digital video analysis suites for in-depth tactical reviews.",
     },
     {
-      question: "Are there scholarship programs available?",
+      question: "Are there financial aid or scholarship opportunities?",
       answer:
-        "Absolutely. We believe talent shouldn't be limited by finances. We offer merit-based scholarships for exceptionally talented players who demonstrate dedication and potential but need financial assistance.",
+        "We believe that financial constraints shouldn&apos;t hinder world-class talent. Kicken Academy offers a limited number of merit-based scholarships annually for exceptionally gifted players who demonstrate elite potential and a professional work ethic.",
     },
   ];
 
   return (
-    // Spacing: Mobile 56px, Tablet 80px, Desktop 100px
     <section className="bg-white text-black py-[56px] md:py-[80px] lg:py-[100px]">
       <div className="container mx-auto px-[20px] md:px-[32px] lg:px-[64px]">
         
         {/* --- Header --- */}
         <div className="max-w-4xl mx-auto text-center mb-[48px] md:mb-[64px]" data-aos="fade-up">
           <h3 className="text-blue-600 font-bold uppercase tracking-widest text-[14px] md:text-[16px] mb-2">
-            Common Questions
+            Academy Intelligence
           </h3>
           <h2 className="font-extrabold text-[32px] md:text-[48px] lg:text-[64px] leading-[1.1] text-gray-900 mb-6">
             Frequently Asked <span className="text-blue-600">Questions</span>
           </h2>
           <p className="text-gray-500 text-[15px] md:text-[16px] lg:text-[18px] leading-relaxed max-w-2xl mx-auto">
-            Everything you need to know about our training, leagues, and how we help you become a champion.
+            Find answers to common inquiries regarding our pro-pathway enrollment, elite facilities, and scouting opportunities.
           </p>
         </div>
 
@@ -85,16 +84,14 @@ const FAQ = () => {
                   {faq.question}
                 </span>
                 
-                {/* Rotating Icon */}
                 <span className={`transform transition-transform duration-300 ${openFAQ === index ? "rotate-180" : "rotate-0"}`}>
                   <FaChevronDown className="text-sm" />
                 </span>
               </button>
 
-              {/* Answer Body */}
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openFAQ === index ? "max-h-[200px] opacity-100 pb-[24px]" : "max-h-0 opacity-0"
+                  openFAQ === index ? "max-h-[300px] opacity-100 pb-[24px]" : "max-h-0 opacity-0"
                 }`}
               >
                 <p className="text-gray-500 text-[15px] md:text-[16px] leading-relaxed">

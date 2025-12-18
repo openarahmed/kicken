@@ -16,6 +16,8 @@ const StayConnectedSection: React.FC = () => {
       once: true,
     });
 
+    const currentSectionRef = sectionRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,25 +26,25 @@ const StayConnectedSection: React.FC = () => {
           }
         });
       },
-      { threshold: 0.3 } // Start counting when 30% visible
+      { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
     };
   }, []);
 
-  // Stats Data
+  // Stats Data Update: Realistic but impressive numbers
   const stats = [
-    { id: 1, value: 25, label: "Years of Experience", suffix: "+" },
-    { id: 2, value: 480, label: "Members Joined", suffix: "k" },
-    { id: 3, value: 98, label: "Professional Trainers", suffix: "" },
+    { id: 1, value: 15, label: "Years of Legacy", suffix: "+" },
+    { id: 2, value: 12, label: "Athletes Trained", suffix: "k" },
+    { id: 3, value: 45, label: "Licensed Coaches", suffix: "+" },
   ];
 
   return (
@@ -57,15 +59,17 @@ const StayConnectedSection: React.FC = () => {
           {/* --- Left Column: Text & Stats --- */}
           <div data-aos="fade-right">
             
-            {/* Header */}
+            {/* Headline Update */}
             <h2 className="font-extrabold leading-[1.1] mb-[24px] text-[32px] md:text-[48px] lg:text-[64px] text-gray-900">
-              Stay Connected. <br />
-              Stay Active. <span className="text-blue-600">Play Hard.</span>
+              Beyond the Pitch. <br />
+              Building <span className="text-blue-600">Future Icons.</span>
             </h2>
             
+            {/* Description Update */}
             <p className="text-gray-700 mb-[40px] text-[15px] md:text-[16px] leading-relaxed max-w-xl">
-              We provide world-class facilities and expert guidance to help you reach 
-              your peak performance. Join a community that pushes boundaries.
+              Since our founding, Kicken Academy has been a sanctuary for raw talent. 
+              We don&apos;t just train players; we build character, instill discipline, 
+              and create a clear pathway to the professional football world.
             </p>
 
             {/* Stats Grid */}
@@ -93,8 +97,9 @@ const StayConnectedSection: React.FC = () => {
               ))}
             </div>
 
+            {/* Quote Update: Escaped quotes already present */}
             <p className="text-gray-600 text-[14px] md:text-[15px] italic border-l-4 border-blue-600 pl-4">
-              "Consistency is what transforms average into excellence."
+              &quot;Champions are not born in the stadium; they are forged through thousands of hours of unseen training.&quot;
             </p>
           </div>
 
@@ -104,17 +109,16 @@ const StayConnectedSection: React.FC = () => {
             data-aos="fade-left"
           >
             <Image
-              src="https://i.postimg.cc/XJBS3wpc/about_us_6.jpg" // NEW URL
-              alt="Stay Active Training"
+              src="https://i.postimg.cc/XJBS3wpc/about_us_6.jpg"
+              alt="Elite Academy Training Session"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             
-            {/* Overlay Badge */}
             <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-lg shadow-lg hidden md:block">
-               <p className="font-bold text-gray-900">Join the Club</p>
-               <p className="text-blue-600 text-sm">Start Today</p>
+               <p className="font-bold text-gray-900">Elite Residency</p>
+               <p className="text-blue-600 text-sm">Admissions Open</p>
             </div>
           </div>
 
